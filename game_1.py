@@ -63,7 +63,7 @@ class Main(Data):
                 self.shell.remove(state)
             else:
                 state["x"] += self.shell_speed
-                self.canvas.create_text(state["x"],state["y"],text=state["image"],font=("",self.shell_size))
+                self.canvas.create_text(state["x"],state["y"],text=state["image"],font=("",self.shell_size),fill="orange")
         # Countdown cooltime
         if self.shell_cooltime > 0:
             self.shell_cooltime -= 1
@@ -94,7 +94,7 @@ class Main(Data):
                     state["y"] += state["d_y"]
                     if state["y"] > state["home_y"]+50 or state["y"] < state["home_y"]-50:
                         state["d_y"] *= -1
-                self.canvas.create_text(state["x"],state["y"],text=state["image"],font=("",self.entity_size))
+                self.canvas.create_text(state["x"],state["y"],text=state["image"],font=("",self.entity_size),fill="green")
         if self.entity_cooltime > 0:
             self.entity_cooltime -= 1
     
