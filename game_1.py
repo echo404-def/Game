@@ -166,7 +166,11 @@ class Main(Data,Start,Gameover,StatesBar):
                 self.effect.remove(effect)
             else:
                 effect["time"] -= 1
-                self.canvas.create_text(effect["x"],effect["y"],text=effect["image"],font=("Arial",self.effect_size),fill="red")
+                if effect["image"] == self.effect_image[2]:
+                    color = "yellow"
+                else:
+                    color = "red"
+                self.canvas.create_text(effect["x"],effect["y"],text=effect["image"],font=("Arial",self.effect_size),fill=color)
         
         
         
