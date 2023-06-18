@@ -238,7 +238,6 @@ class Main(Data,Start,Gameover,StatesBar):
                         self.add_effect(state["x"], state["y"], "damage")
                         self.entity.remove(state)
                         self.shell.remove(shell)
-                        print("\a",end=("")) # Sound
                         if state["type"] == "bomb":
                             self.flash_time = self.flash_time_set
                             self.hp -= 1
