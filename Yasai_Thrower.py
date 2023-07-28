@@ -49,7 +49,7 @@ class Data:
     score = 0
     
     hp_image = ["❤️","♡"]
-    hp_full = 3
+    hp_full = 5
     hp = hp_full
     
     # Switching screens
